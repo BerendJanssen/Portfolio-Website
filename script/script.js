@@ -1,5 +1,8 @@
 const body = document.querySelector("body")
 const logo = document.querySelector("body header a")
+const navButton1 = document.querySelector("body header nav ul li button")
+const navButton2 = document.querySelector("body header nav ul li:nth-of-type(2) button")
+const navButton3 = document.querySelector("body header nav ul li:nth-of-type(3) button")
 const achtergrond = document.querySelector("body main .achtergrond")
 const contactCTA = document.querySelector("body main .achtergrond .contactCTA")
 const gradient = document.querySelector("body main .gradient")
@@ -28,6 +31,9 @@ themaToggle.addEventListener('click', veranderThema);
 function veranderThema() {
     body.classList.toggle("light-mode");
     logo.classList.toggle("light-mode");
+    navButton1.classList.toggle("light-mode");
+    navButton2.classList.toggle("light-mode");
+    navButton3.classList.toggle("light-mode");
     achtergrond.classList.toggle("light-mode");
     contactCTA.classList.toggle("light-mode");
     gradient.classList.toggle("light-mode");
