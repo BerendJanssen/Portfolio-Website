@@ -1,0 +1,499 @@
+/*----------*/
+/* ALGEMEEN */
+/*----------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-light-1: #FFFFFF;
+    --color-light-2: #859EB2;
+    --color-light-3: #859EB2;
+
+    --color-dark-1: #292929;
+    --color-dark-2: #597190;
+    --color-dark-3: #2B3058;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-style: normal;
+    line-height: normal;
+
+    background-color: var(--color-dark-1);
+    color: var(--color-light-1);
+}
+
+body.light-mode {
+    background-color: var(--color-light-1);
+    color: var(--color-dark-1);
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 0.96px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.64px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.40px;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+}
+
+/*--------*/
+/* HEADER */
+/*--------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 10vh;
+    padding: 0 5% 0 5%;
+}
+
+/* LOGO */
+
+a {
+    color: var(--color-light-1);
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.64px;
+
+    text-decoration: none;
+}
+
+a.light-mode {
+    color: var(--color-dark-1);
+}
+
+/* NAV */
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+
+    list-style-type: none;
+}
+
+header nav ul li {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+}
+
+header nav ul li:nth-of-type(2){
+    padding: 0 7em 0 7em;
+}
+
+/* DARK/LIGHT MODE */
+
+.toggle {
+    display: flex;
+
+    list-style-type: none;
+}
+
+.toggle li:nth-of-type(2){
+    margin-top: 0.5em;
+    padding: 0 1em 0 1em;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-light-1);
+    border-radius: 34px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch span:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    right: 4px;
+    bottom: 4px;
+    background-color: var(--color-dark-1);
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + span {
+    background-color: var(--color-dark-1);
+}
+
+input:focus + span {
+    box-shadow: 0 0 2px var(--color-light-1);
+}
+
+input:checked + span:before {
+    -webkit-transform: translateX(-26px);
+    -ms-transform: translateX(-26px);
+    transform: translateX(-26px);
+
+    background-color: var(--color-light-1);
+}
+
+.zon {
+    height: 48px;
+    width: 48px;
+}
+
+.maan {
+    height: 40px;
+    width: 40px;
+    margin-top: 0.3em;
+}
+
+/*--------*/
+/*- MAIN -*/
+/*--------*/
+
+/* LANDIGSPAGINA */
+
+.achtergrond {
+    height: 80vh;
+    background: radial-gradient(93.47% 93.47% at 50.03% 80.93%, #BCE9FF 0%, #0B0F43 90%);
+}
+
+.achtergrond.light-mode {
+    background: radial-gradient(89.52% 89.41% at 51.48% 77.59%, #FFE6BE 32%, #F6A626 100%);
+}
+
+.landing {
+    margin: 0 13vw 0 13vw;
+}
+
+.landing h1 {
+    padding-top: 5em;
+}
+
+/* CALL TO ACTION BORDJE */
+
+.contactCTA {
+    position: absolute;
+    bottom: 10vh;
+    right: 10em;
+    height: 282px;
+    width: 233px;
+}
+
+.contactCTA.light-mode {
+    filter: invert(100%) brightness(1000%);
+}
+
+/* MY WORK SECTIE */
+
+.work {
+    display: flex;
+    flex-direction: column;
+}
+
+.work article h3 {
+    margin: 0 13vw 0 13vw;
+    padding-top: 5vh;
+}
+
+.work article p {
+    margin: 0 13vw 0 13vw;
+}
+
+.work h2 {
+    display: flex;
+    justify-content: center;
+    margin: 10vh 0 10vh 0;
+}
+
+.work article {
+    height: 30vh;
+    margin-bottom: 10vh;
+
+    background: linear-gradient(180deg, #292929 0%, #353D47 100%);
+    box-shadow: 0px 6px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.work article.light-mode {
+    background: linear-gradient(180deg, #FFF 0%, #FFEDD0 100%);
+}
+
+.work button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 5vw;
+    width: 30vw;
+    margin: 0 auto 15vh auto;
+
+    color: var(--color-light-1);
+    background: var(--color-dark-2);
+    box-shadow: 0px 6px 4px 4px rgba(0, 0, 0, 0.25);
+
+    transition: 200ms;
+}
+
+.work button.light-mode {
+    background: var(--color-light-2);
+}
+
+.work button:hover {
+    scale: 1.05;
+}
+
+.work button:active {
+    background: var(--color-dark-3);
+    box-shadow: none;
+}
+
+.work button:active.light-mode {
+    background: var(--color-light-3);
+}
+
+/* GRADIENT */
+
+.gradient {
+    background: radial-gradient(112.55% 112.55% at 50.03% 100%, #8EB1CF 5%, #0B0F43 100%);
+}
+
+.gradient.light-mode {
+    background: radial-gradient(111.96% 111.81% at 50.03% 100%, #FFE6BE 5%, #F6A626 100%);
+}
+
+/* ABOUT ME SECTIE */
+
+.about {
+    margin: 0 13vw 0 13vw;
+    padding-bottom: 15vw;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 32px;
+}
+
+.about h2 {
+    display: flex;
+    justify-content: center;
+    padding: 20vh 0 15vh 0;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.about div {
+    padding: 32px;
+    border-radius: 15px;
+
+    background-color: var(--color-dark-1);
+}
+
+.about div.light-mode {
+    background-color: var(--color-light-1);
+}
+
+.about div:nth-of-type(1) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.about div p {
+    padding: 0 0 1em 0;
+}
+
+.about div:nth-of-type(2) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 5;
+}
+
+.about div img {
+    width: 13.9vw;
+    max-width: 267px;
+    border-radius: 15px;
+    justify-self: end;
+    align-self: end;
+}
+
+/* CONTACT SECTIE */
+
+.contact {
+    margin: 0 13vw 0 13vw;
+    padding-bottom: 15vh;
+
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.contact h2 {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 10vh 0 15vh 0;
+}
+
+.contact button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20.2vw;
+    height: 10vh;
+    margin-bottom: 32px;
+    border-radius: 15px;
+}
+
+.contact button.light-mode {
+    background: var(--color-dark-1);
+    color: var(--color-light-1);
+}
+
+.contact section {
+    width: 23.5vw;
+    border-radius: 15px;
+
+    background: var(--color-dark-1);
+}
+
+.contact section.light-mode {
+    background: var(--color-light-1);
+}
+
+/* EMAIL/LINKEDIN */
+
+.contact section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+}
+
+.contact section:nth-of-type(1) h3 {
+    margin: 32px 0 32px 0;
+}
+
+.contact section:nth-of-type(1) p {
+    margin: 32px 0 32px 0;
+}
+
+.email-logo {
+    height: 64px;
+    width: 64px;
+}
+
+.email-logo.light-mode {
+    filter: invert(100%) brightness(1000%);
+}
+
+.linkedin-logo {
+    height: 64px;
+    width: 64px;
+}
+
+.linkedin-logo.light-mode {
+    filter: invert(100%) brightness(1000%);
+}
+
+/* CV SECTIE */
+
+.contact section:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3;
+
+    justify-self: end;
+    align-self: start;
+}
+
+.contact section:nth-of-type(2) h3 {
+    margin: 32px 0 32px 0;
+}
+
+.download {
+    height: 64px;
+    width: 64px;
+}
+
+.download.light-mode {
+    filter: invert(100%) brightness(1000%);
+}
+
+/*--------*/
+/* FOOTER */
+/*--------*/
+
+footer {
+    background: var(--color-dark-1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2%;
+}
+
+footer.light-mode {
+    background: var(--color-light-1);
+}
+
+footer p {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+}
+
+footer p.light-mode {
+    color: var(--color-dark-1);
+}
