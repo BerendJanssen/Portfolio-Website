@@ -24,6 +24,8 @@ body {
 
     background-color: var(--color-dark-1);
     color: var(--color-light-1);
+
+    transition: 100ms;
 }
 
 body.light-mode {
@@ -76,16 +78,17 @@ header {
 
 /* LOGO */
 
-a {
+header a {
     color: var(--color-light-1);
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 800;
     letter-spacing: 0.64px;
 
     text-decoration: none;
+    transition: 100ms;
 }
 
-a.light-mode {
+header a.light-mode {
     color: var(--color-dark-1);
 }
 
@@ -98,12 +101,6 @@ header nav ul {
     list-style-type: none;
 }
 
-header nav ul li {
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 0.48px;
-}
-
 header nav ul li:nth-of-type(2){
     padding: 0 7em 0 7em;
 }
@@ -111,6 +108,17 @@ header nav ul li:nth-of-type(2){
 header nav ul li button {
     background: none;
     color: var(--color-light-1);
+
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.40px;
+
+    transition: 100ms;
+}
+
+header nav ul li button:hover {
+    scale: 1.1;
+    cursor: pointer;
 }
 
 header nav ul li button.light-mode {
@@ -224,10 +232,12 @@ input:checked + span:before {
 
 .contactCTA {
     position: absolute;
-    bottom: 10vh;
+    bottom: 9.9vh;
     right: 10em;
     height: 282px;
     width: 233px;
+
+    transition: 100ms;
 }
 
 .contactCTA.light-mode {
@@ -241,6 +251,13 @@ input:checked + span:before {
     flex-direction: column;
 }
 
+.work h2 {
+    display: flex;
+    justify-content: center;
+    margin: 10vh 0 10vh 0;
+    scroll-margin-top: 10vh;
+}
+
 .work article h3 {
     margin: 0 13vw 0 13vw;
     padding-top: 5vh;
@@ -248,12 +265,6 @@ input:checked + span:before {
 
 .work article p {
     margin: 0 13vw 0 13vw;
-}
-
-.work h2 {
-    display: flex;
-    justify-content: center;
-    margin: 10vh 0 10vh 0;
 }
 
 .work article {
@@ -298,6 +309,7 @@ input:checked + span:before {
 
 .work button:hover {
     scale: 1.05;
+    cursor: pointer;
 }
 
 .work button:active {
@@ -334,6 +346,8 @@ input:checked + span:before {
     display: flex;
     justify-content: center;
     padding: 20vh 0 15vh 0;
+
+
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -394,21 +408,6 @@ input:checked + span:before {
     padding: 10vh 0 15vh 0;
 }
 
-.contact button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20.2vw;
-    height: 10vh;
-    margin-bottom: 32px;
-    border-radius: 15px;
-}
-
-.contact button.light-mode {
-    background: var(--color-dark-1);
-    color: var(--color-light-1);
-}
-
 .contact section {
     width: 23.5vw;
     border-radius: 15px;
@@ -418,6 +417,48 @@ input:checked + span:before {
 
 .contact section.light-mode {
     background: var(--color-light-1);
+}
+
+.contact button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20.2vw;
+    height: 10vh;
+    margin-bottom: 32px;
+    border-radius: 15px;
+    transition: 200ms;
+}
+
+.contact button:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.contact button.light-mode {
+    background: var(--color-dark-1);
+    color: var(--color-light-1);
+}
+
+.contact a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20.2vw;
+    height: 10vh;
+    margin-bottom: 32px;
+    border-radius: 15px;
+    transition: 200ms;
+
+    background: var(--color-light-1);
+}
+
+.contact a:hover {
+    scale: 1.05;
+}
+
+.contact a.light-mode {
+    background: var(--color-dark-1);
 }
 
 /* EMAIL/LINKEDIN */
@@ -441,9 +482,28 @@ input:checked + span:before {
     margin: 32px 0 32px 0;
 }
 
+.contact section button p {
+    font-family: 'Montserrat';
+}
+
+.contact section:nth-of-type(1) a {
+    text-decoration: none;
+    color: var(--color-dark-1);
+}
+
+.contact section:nth-of-type(1) a:visited {
+    color: var(--color-dark-1);
+}
+
+.contact section:nth-of-type(1) a.light-mode {
+    color: var(--color-light-1);
+}
+
 .email-logo {
     height: 64px;
     width: 64px;
+
+    margin-right: 1em;
 }
 
 .email-logo.light-mode {
@@ -453,6 +513,8 @@ input:checked + span:before {
 .linkedin-logo {
     height: 64px;
     width: 64px;
+
+    margin-right: 1em;
 }
 
 .linkedin-logo.light-mode {

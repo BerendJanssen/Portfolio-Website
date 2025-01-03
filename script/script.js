@@ -1,4 +1,5 @@
 const body = document.querySelector("body")
+const themaToggle = document.querySelector(".switch input")
 const logo = document.querySelector("body header a")
 const navButton1 = document.querySelector("body header nav ul li button")
 const navButton2 = document.querySelector("body header nav ul li:nth-of-type(2) button")
@@ -16,15 +17,15 @@ const div2About = document.querySelector("body main .gradient .about div:nth-of-
 const contactSectie = document.querySelector("body main .gradient .contact section")
 const contactSectie2 = document.querySelector("body main .gradient .contact section:nth-of-type(2)")
 const contactButton1 = document.querySelector("body main .gradient .contact section button")
-const contactButton2 = document.querySelector("body main .gradient .contact section button:nth-of-type(2)")
-const contactButton3 = document.querySelector("body main .gradient .contact section:nth-of-type(2) button")
+const contactButton2 = document.querySelector("body main .gradient .contact section a")
+const cvButton = document.querySelector("body main .gradient .contact section:nth-of-type(2) a")
 const emailLogo = document.querySelector(".email-logo")
 const linkedinLogo = document.querySelector(".linkedin-logo")
 const downloadLogo = document.querySelector(".download")
 const footer = document.querySelector("body footer")
 const copyright = document.querySelector("body footer p")
 
-const themaToggle = document.querySelector(".switch input")
+
 
 themaToggle.addEventListener('click', veranderThema);
 
@@ -48,12 +49,57 @@ function veranderThema() {
     contactSectie2.classList.toggle("light-mode");
     contactButton1.classList.toggle("light-mode");
     contactButton2.classList.toggle("light-mode");
-    contactButton3.classList.toggle("light-mode");
+    cvButton.classList.toggle("light-mode");
     emailLogo.classList.toggle("light-mode");
     linkedinLogo.classList.toggle("light-mode");
     downloadLogo.classList.toggle("light-mode");
     footer.classList.toggle("light-mode");
     copyright.classList.toggle("light-mode");
 
-    console.log("Thema veranderd");
+    console.log("Theme changed");
+}
+
+
+
+contactButton1.addEventListener('click', copyEmail)
+
+function copyEmail() {
+    navigator.clipboard.writeText("berend@janssen-it.com").then(() => {
+        console.log('Content copied to clipboard');
+        /* Tekst succesvol gekopieerd! */
+      },() => {
+        console.error('Failed to copy');
+        /* Tekst niet kunnen kopieren! */
+      });
+}
+
+
+
+navButton1.addEventListener('click', scrollWork)
+
+const myWork = document.querySelector(".work h2")
+
+function scrollWork() {
+  myWork.scrollIntoView({behavior: "smooth", block: "start"});
+  console.log("Scroll to my work")
+}
+
+
+navButton2.addEventListener('click', scrollAbout)
+
+const aboutMe = document.querySelector(".about h2")
+
+function scrollAbout() {
+  aboutMe.scrollIntoView({behavior: "smooth", block: "start"});
+  console.log("Scroll to about me")
+}
+
+
+navButton3.addEventListener('click', scrollContact)
+
+const contact = document.querySelector(".contact h2")
+
+function scrollContact() {
+  contact.scrollIntoView({behavior: "smooth", block: "start"});
+  console.log("Scroll to contact")
 }
