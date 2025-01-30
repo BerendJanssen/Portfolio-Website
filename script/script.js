@@ -1,3 +1,4 @@
+// Dark/light toggle
 const body = document.querySelector("body")
 const themaToggle = document.querySelector(".switch input")
 const logo = document.querySelector("body header a")
@@ -6,19 +7,26 @@ const navButton2 = document.querySelector("body header nav ul li:nth-of-type(2) 
 const navButton3 = document.querySelector("body header nav ul li:nth-of-type(3) button")
 const achtergrond = document.querySelector("body main .achtergrond")
 const contactCTA = document.querySelector("body main .achtergrond .contactCTA")
-const gradient = document.querySelector("body main .gradient")
+
+const work = document.querySelector("body main .work")
 const article1 = document.querySelector("body main .work article:nth-of-type(1)")
 const article2 = document.querySelector("body main .work article:nth-of-type(2)")
 const article3 = document.querySelector("body main .work article:nth-of-type(3)")
 const article4 = document.querySelector("body main .work article:nth-of-type(4)")
+const articleP1 = document.querySelector("body main .work article:nth-of-type(1) p")
+const articleP2 = document.querySelector("body main .work article:nth-of-type(2) p")
+const articleP3 = document.querySelector("body main .work article:nth-of-type(3) p")
+const articleP4 = document.querySelector("body main .work article:nth-of-type(4) p")
 const knopSeeMore = document.querySelector("body main .work button")
-const divAbout = document.querySelector("body main .gradient .about div")
-const div2About = document.querySelector("body main .gradient .about div:nth-of-type(2)")
-const contactSectie = document.querySelector("body main .gradient .contact section")
-const contactSectie2 = document.querySelector("body main .gradient .contact section:nth-of-type(2)")
-const contactButton1 = document.querySelector("body main .gradient .contact section button")
-const contactButton2 = document.querySelector("body main .gradient .contact section a")
-const cvButton = document.querySelector("body main .gradient .contact section:nth-of-type(2) a")
+
+const background2 = document.querySelector("body main .background2")
+const divAbout = document.querySelector("body main .background2 .about div")
+const div2About = document.querySelector("body main .background2 .about div:nth-of-type(2)")
+const contactSectie = document.querySelector("body main .background2 .contact section")
+const contactSectie2 = document.querySelector("body main .background2 .contact section:nth-of-type(2)")
+const contactButton1 = document.querySelector("body main .background2 .contact section button")
+const contactButton2 = document.querySelector("body main .background2 .contact section a")
+const cvButton = document.querySelector("body main .background2 .contact section:nth-of-type(2) a")
 const emailLogo = document.querySelector(".email-logo")
 const linkedinLogo = document.querySelector(".linkedin-logo")
 const downloadLogo = document.querySelector(".download")
@@ -37,12 +45,19 @@ function veranderThema() {
     navButton3.classList.toggle("light-mode");
     achtergrond.classList.toggle("light-mode");
     contactCTA.classList.toggle("light-mode");
-    gradient.classList.toggle("light-mode");
+
+    work.classList.toggle("light-mode");
     article1.classList.toggle("light-mode");
     article2.classList.toggle("light-mode");
     article3.classList.toggle("light-mode");
     article4.classList.toggle("light-mode");
+    articleP1.classList.toggle("light-mode");
+    articleP2.classList.toggle("light-mode");
+    articleP3.classList.toggle("light-mode");
+    articleP4.classList.toggle("light-mode");
     knopSeeMore.classList.toggle("light-mode");
+
+    background2.classList.toggle("light-mode")
     divAbout.classList.toggle("light-mode");
     div2About.classList.toggle("light-mode");
     contactSectie.classList.toggle("light-mode");
@@ -59,8 +74,47 @@ function veranderThema() {
     console.log("Theme changed");
 }
 
+//ContactCTA
+contactCTA.addEventListener('click', scrollContact)
 
 
+
+// Navbar
+const myWork = document.querySelector(".work h2")
+
+navButton1.addEventListener('click', scrollWork)
+
+function scrollWork() {
+  myWork.scrollIntoView({behavior: "smooth", block: "start"});
+  console.log("Scroll to my work")
+}
+
+
+
+const aboutMe = document.querySelector(".about h2")
+
+navButton2.addEventListener('click', scrollAbout)
+
+function scrollAbout() {
+  aboutMe.scrollIntoView({behavior: "smooth", block: "start"});
+  console.log("Scroll to about me")
+}
+
+
+
+const contact = document.querySelector(".contact h2")
+
+navButton3.addEventListener('click', scrollContact)
+
+function scrollContact() {
+  contact.scrollIntoView({behavior: "smooth", block: "start"});
+  console.log("Scroll to contact")
+}
+
+
+
+
+// Copy email
 contactButton1.addEventListener('click', copyEmail)
 
 function copyEmail() {
@@ -75,31 +129,3 @@ function copyEmail() {
 
 
 
-navButton1.addEventListener('click', scrollWork)
-
-const myWork = document.querySelector(".work h2")
-
-function scrollWork() {
-  myWork.scrollIntoView({behavior: "smooth", block: "start"});
-  console.log("Scroll to my work")
-}
-
-
-navButton2.addEventListener('click', scrollAbout)
-
-const aboutMe = document.querySelector(".about h2")
-
-function scrollAbout() {
-  aboutMe.scrollIntoView({behavior: "smooth", block: "start"});
-  console.log("Scroll to about me")
-}
-
-
-navButton3.addEventListener('click', scrollContact)
-
-const contact = document.querySelector(".contact h2")
-
-function scrollContact() {
-  contact.scrollIntoView({behavior: "smooth", block: "start"});
-  console.log("Scroll to contact")
-}
