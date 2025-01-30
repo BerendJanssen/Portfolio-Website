@@ -250,7 +250,7 @@ input:checked + span:before {
 
 .achtergrond {
     height: 90vh;
-    background-image: url("/images/Achtergrond-1-dark.png");
+    background-image: url("../images/Achtergrond-1-dark.png");
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -497,7 +497,7 @@ input:checked + span:before {
 }
 
 .background2 {
-    background-image: url("/images/Achtergrond-2-2.2-dark.png");
+    background-image: url("../images/Achtergrond-2-2.2-dark.png");
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -505,7 +505,7 @@ input:checked + span:before {
 }
 
 .background2.light-mode {
-    background-image: url("/images/Achtergrond-2-2-light.png");
+    background-image: url("../images/Achtergrond-2-2-light.png");
 }
 /* ABOUT ME SECTIE */
 
