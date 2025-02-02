@@ -108,7 +108,8 @@ header {
     align-items: center;
 
     height: 10vh;
-    padding: 0 5% 0 5%;
+    width: 90vw;
+    margin: 0 5% 0 5%;
 
     background-color: transparent;
 }
@@ -196,7 +197,7 @@ header nav ul li button.light-mode {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--color-light-1);
+    background-color: #DFF2FF;
     border-radius: 34px;
     -webkit-transition: .4s;
     transition: .4s;
@@ -209,14 +210,18 @@ header nav ul li button.light-mode {
     width: 26px;
     right: 4px;
     bottom: 4px;
-    background-color: var(--color-dark-1);
+    background-color: #1B3960;
     border-radius: 50%;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
+.switch span:before + .zon {
+    visibility: hidden;
+}
+
 input:checked + span {
-    background-color: var(--color-dark-1);
+    background-color: #1B3960;
 }
 
 input:focus + span {
@@ -228,7 +233,7 @@ input:checked + span:before {
     -ms-transform: translateX(-26px);
     transform: translateX(-26px);
 
-    background-color: var(--color-light-1);
+    background-color: #DFF2FF;
 }
 
 .zon {
@@ -257,7 +262,9 @@ input:checked + span:before {
 }
 
 .achtergrond.light-mode {
-    background: radial-gradient(89.52% 89.41% at 51.48% 77.59%, #FFE6BE 32%, #F6A626 100%);
+    background: url("../images/Achtergrond-1-light.png");
+    background-size: cover;
+    background-position: center bottom;
 }
 
 .landing {
@@ -382,6 +389,10 @@ input:checked + span:before {
     background: linear-gradient(51deg, rgba(73, 73, 73, 0.00) 0%, rgba(100, 124, 155, 0.50) 100%);
 }
 
+.work article:nth-of-type(1).light-mode {
+    background: linear-gradient(51deg, #dff2ff 0%, rgba(100, 124, 155, 0.50) 100%);
+}
+
 .work article:nth-of-type(1):hover {
     display: grid;
     cursor: pointer;
@@ -395,6 +406,10 @@ input:checked + span:before {
     grid-row-end: 3;
     
     background: linear-gradient(231deg, rgba(73, 73, 73, 0.00) 0%, rgba(100, 124, 155, 0.50) 100%);
+}
+
+.work article:nth-of-type(2).light-mode {
+    background: linear-gradient(51deg, #dff2ff 0%, rgba(100, 124, 155, 0.50) 100%);
 }
 
 .work article:nth-of-type(2):hover {
@@ -412,6 +427,10 @@ input:checked + span:before {
     background: linear-gradient(309deg, rgba(73, 73, 73, 0.00) 0%, rgba(100, 124, 155, 0.50) 100%);
 }
 
+.work article:nth-of-type(3).light-mode {
+    background: linear-gradient(51deg, #dff2ff 0%, rgba(100, 124, 155, 0.50) 100%);
+}
+
 .work article:nth-of-type(3):hover {
     display: grid;
     cursor: pointer;
@@ -425,6 +444,10 @@ input:checked + span:before {
     grid-row-end: 4;
     
     background: linear-gradient(129deg, rgba(73, 73, 73, 0.00) 0%, rgba(100, 124, 155, 0.50) 100%);
+}
+
+.work article:nth-of-type(4).light-mode {
+    background: linear-gradient(129deg, #dff2ff 0%, rgba(100, 124, 155, 0.50) 100%);
 }
 
 .work article:nth-of-type(4):hover {
