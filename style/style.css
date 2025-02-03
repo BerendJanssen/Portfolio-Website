@@ -12,7 +12,7 @@
 }
 
 :root {
-    --color-light-1: #FFFFFF;
+    --color-light-1: #EAF2F8;
     --color-light-2: #859EB2;
     --color-light-3: #859EB2;
 
@@ -127,7 +127,7 @@ header a {
 }
 
 header a.light-mode {
-    color: var(--color-dark-1);
+    color: #1B3960;
 }
 
 /* NAV */
@@ -288,7 +288,7 @@ input:checked + span:before {
 }
 
 .contactCTA.light-mode {
-    filter: invert(100%) brightness(1000%);
+    filter: invert(91%) sepia(8%) saturate(227%) hue-rotate(170deg) brightness(114%) contrast(95%);
 }
 
 .contactCTA:hover {
@@ -390,7 +390,7 @@ input:checked + span:before {
 }
 
 .work article:nth-of-type(1).light-mode {
-    background: linear-gradient(51deg, #dff2ff 0%, rgba(100, 124, 155, 0.50) 100%);
+    background: linear-gradient(51deg, #ffffff 0%, #dff2ff 100%);
 }
 
 .work article:nth-of-type(1):hover {
@@ -409,7 +409,7 @@ input:checked + span:before {
 }
 
 .work article:nth-of-type(2).light-mode {
-    background: linear-gradient(51deg, #dff2ff 0%, rgba(100, 124, 155, 0.50) 100%);
+    background: linear-gradient(231deg, #ffffff 0%, #dff2ff 100%);
 }
 
 .work article:nth-of-type(2):hover {
@@ -428,7 +428,7 @@ input:checked + span:before {
 }
 
 .work article:nth-of-type(3).light-mode {
-    background: linear-gradient(51deg, #dff2ff 0%, rgba(100, 124, 155, 0.50) 100%);
+    background: linear-gradient(309deg, #ffffff 0%, #dff2ff 100%);
 }
 
 .work article:nth-of-type(3):hover {
@@ -447,7 +447,7 @@ input:checked + span:before {
 }
 
 .work article:nth-of-type(4).light-mode {
-    background: linear-gradient(129deg, #dff2ff 0%, rgba(100, 124, 155, 0.50) 100%);
+    background: linear-gradient(129deg, #ffffff 0%, #dff2ff 100%);
 }
 
 .work article:nth-of-type(4):hover {
@@ -508,23 +508,13 @@ input:checked + span:before {
     box-shadow: none;
 }
 
-/* GRADIENT */
-
-.gradient {
-    background: radial-gradient(112.55% 112.55% at 50.03% 100%, #8EB1CF 5%, #0B0F43 100%);
-    z-index: -1;
-}
-
-.gradient.light-mode {
-    background: radial-gradient(111.96% 111.81% at 50.03% 100%, #FFE6BE 5%, #F6A626 100%);
-}
+/* TWEEDE ACHTERGROND */
 
 .background2 {
     background-image: url("../images/Achtergrond-2-2.2-dark.png");
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
 }
 
 .background2.light-mode {
@@ -569,7 +559,7 @@ input:checked + span:before {
 }
 
 .about div.light-mode {
-    background: linear-gradient(149deg, #EAF2F8 17.47%, #FFFFFF 83.99%);
+    background: linear-gradient(149deg, #FFFFFF 17.47%, #EAF2F8 83.99%);
 }
 
 .about div:nth-of-type(2) {
@@ -577,7 +567,7 @@ input:checked + span:before {
 }
 
 .about div:nth-of-type(2).light-mode {
-    background: linear-gradient(197deg, #EAF2F8 10.8%, #FFFFFF 100%);
+    background: linear-gradient(197deg, #FFFFFF 10.8%, #EAF2F8 100%);
 }
 
 .about div:nth-of-type(1) {
@@ -640,7 +630,7 @@ input:checked + span:before {
 }
 
 .contact section.light-mode {
-    background: var(--color-light-1);
+    background: #FFFFFF;
 }
 
 .contact button {
@@ -781,6 +771,24 @@ input:checked + span:before {
 .download.light-mode {
     filter: invert(100%) brightness(1000%);
 }
+
+
+
+/* KAMPVUUR */
+
+.campfire {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    translate: 43.8vw -23vh;
+
+    background-image: url(../images/Vlam.png);
+    background-size: 250px;
+
+    height: 250px;
+    width: 250px;
+}
+
 
 /*--------*/
 /* FOOTER */
