@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berend - Project 1</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="projectenHeader">
+        <a href="./index.html">BerendJanssen</a>
+
+        <div class="toggleDiv">
+            <ul class="toggle">
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="zon">
+                        <g clip-path="url(#clip0_257_231)">
+                        <path d="M24 42V44M42 24H44M24 6V4M6 24H4" stroke="#1B3960" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 2"/>
+                        <path d="M37 37L38 38M37 11L38 10M11 11L10 10M11 37L10 38" stroke="#1B3960" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 2"/>
+                        <mask id="mask0_257_231" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-2" width="50" height="50">
+                        <path d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" fill="white"/>
+                        <path d="M24 32C28.4183 32 32 28.4183 32 24C32 19.5817 28.4183 16 24 16C19.5817 16 16 19.5817 16 24C16 28.4183 19.5817 32 24 32Z" fill="black"/>
+                        <path d="M44 10C47.3137 10 50 7.31371 50 4C50 0.686291 47.3137 -2 44 -2C40.6863 -2 38 0.686291 38 4C38 7.31371 40.6863 10 44 10Z" fill="white"/>
+                        <path d="M44 6C45.1046 6 46 5.10457 46 4C46 2.89543 45.1046 2 44 2C42.8954 2 42 2.89543 42 4C42 5.10457 42.8954 6 44 6Z" fill="black"/>
+                        </mask>
+                        <g mask="url(#mask0_257_231)">
+                        <path d="M24 36C30.6274 36 36 30.6274 36 24C36 17.3726 30.6274 12 24 12C17.3726 12 12 17.3726 12 24C12 30.6274 17.3726 36 24 36Z" fill="#1B3960"/>
+                        </g>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_257_231">
+                        <rect width="48" height="48" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </li>
+    
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" aria-label="Schakel tussen licht en donker modus">
+                        <span></span>
+                    </label>
+                </li>
+                    
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="maan">
+                        <g clip-path="url(#clip0_257_227)">
+                        <path d="M16.6693 10C16.6687 12.3334 17.2805 14.6262 18.4436 16.6491C19.6066 18.672 21.2802 20.3543 23.2971 21.5278C25.314 22.7014 27.6035 23.325 29.9369 23.3365C32.2704 23.348 34.5659 22.7469 36.5943 21.5933C35.7926 30.05 28.6693 36.6667 20.0026 36.6667C10.7976 36.6667 3.33594 29.205 3.33594 20C3.33594 11.3333 9.9526 4.21 18.4093 3.40833C17.265 5.41647 16.6652 7.68872 16.6693 10ZM6.66927 20C6.66927 23.5362 8.07403 26.9276 10.5745 29.4281C13.075 31.9286 16.4664 33.3333 20.0026 33.3333C22.3586 33.3342 24.6728 32.7108 26.7095 31.5266C28.7463 30.3424 30.4329 28.6396 31.5976 26.5917C31.0698 26.6417 30.5382 26.6667 30.0026 26.6667C20.7976 26.6667 13.3359 19.205 13.3359 10C13.3359 9.46556 13.3609 8.93389 13.4109 8.405C11.363 9.56975 9.66023 11.2563 8.47601 13.2931C7.29179 15.3298 6.66838 17.644 6.66927 20ZM30.2759 3.81833L31.6693 4.16667V5.83333L30.2759 6.18167C29.6899 6.32822 29.1548 6.63126 28.7277 7.05838C28.3005 7.48551 27.9975 8.02067 27.8509 8.60667L27.5026 10H25.8359L25.4876 8.60667C25.3411 8.02067 25.038 7.48551 24.6109 7.05838C24.1838 6.63126 23.6486 6.32822 23.0626 6.18167L21.6693 5.83333V4.16667L23.0626 3.81833C23.6483 3.67151 24.1831 3.36836 24.6099 2.94125C25.0367 2.51415 25.3395 1.97913 25.4859 1.39333L25.8359 0H27.5026L27.8509 1.39333C27.9975 1.97933 28.3005 2.51449 28.7277 2.94162C29.1548 3.36874 29.6899 3.67178 30.2759 3.81833ZM38.6093 12.1517L40.0026 12.5V14.1667L38.6093 14.515C38.0233 14.6616 37.4881 14.9646 37.061 15.3917C36.6339 15.8188 36.3308 16.354 36.1843 16.94L35.8359 18.3333H34.1693L33.8209 16.94C33.6744 16.354 33.3713 15.8188 32.9442 15.3917C32.5171 14.9646 31.9819 14.6616 31.3959 14.515L30.0026 14.1667V12.5L31.3959 12.1517C31.9819 12.0051 32.5171 11.7021 32.9442 11.275C33.3713 10.8478 33.6744 10.3127 33.8209 9.72667L34.1693 8.33333H35.8359L36.1843 9.72667C36.3308 10.3127 36.6339 10.8478 37.061 11.275C37.4881 11.7021 38.0233 12.0051 38.6093 12.1517Z" fill="#DFF2FF"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_257_227">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+        
+    </header>
+
+    <main>
+        <div class="details">
+            <section>
+                <img src="./images/Project-2.png" alt="">
+                <h2>High school library app</h2>
+                <p>A concept app created for high school student to assist with discovering books and finding them in their school library..</p>
+                <p>Visual design, UX/UI</p>
+            </section>
+
+            <section>
+                <h3>About:</h3>
+                <p><b>Assignment:</b></p> 
+                <p>
+                    Design an interface for younger high school students to easily discover books in their school library using an iPad. By selecting a few preferences, students should receive a personalized book selection. They should also be able to add books to a wishlist and email the list to themselves, making it easier to find the books in the library. The visual design must follow the official branding guidelines of the Municipality of Amsterdam while developing a substyle that appeals to the target audience.
+                </p>
+                <p><b>Solution:</b></p>
+                <p>
+                    De Boekenzoeker is a concept iPad app that helps high school students find books that match their interests. By selecting their preferences, students receive a list of recommendations, making book discovery easier and more engaging. A wishlist feature allows them to save interesting books and email the list to themselves, so they can quickly locate them in the library. The design carefully follows the Municipality of Amsterdam’s branding rules while incorporating a fresh substyle tailored to younger students. Developed through an iterative process, the interface balances functionality and visual appeal to create an intuitive and enjoyable user experience.
+                </p>
+                <a href="https://www.figma.com/design/YVPUO9FQ5oZt3ZxIX7nYZv/Visual-Interface-Design?node-id=0-1&t=ZYJmamuN1SD8n2lA-1"><p>Link to Figma</p></a>
+            </section>
+
+            <section>
+                <h3>Tools:</h3>
+                <ul>
+                    <li><p>Figma</p></li>
+                    <li><p>Adobe Illustrator</p></li>
+                    <li><p>Krita</p></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Images:</h3>
+                <div class="carousel">
+                    <div>
+                        <ul>
+                            <li class="carousel-slideP2"><img src="./images/Detail2/Detail2-1.png" alt="Landing page"></li>
+                            <li class="carousel-slideP2"><img src="./images/Detail2/Detail2-2.png" alt="Image 2"></li>
+                            <li class="carousel-slideP2"><img src="./images/Detail2/Detail2-3.gif" alt="Image 3"></li>
+                            <li class="carousel-slideP2"><img src="./images/Detail2/Detail2-4.png" alt="Image 4"></li>
+                            <li class="carousel-slideP2"><img src="./images/Detail2/Detail2-5.png" alt="Image 5"></li>
+                            <li class="carousel-slideP2"><img src="./images/Detail2/Detail2-6.png" alt="Image 2"></li>
+                            <li class="carousel-slideP2"><img src="./images/Detail2/Detail2-7.png" alt="Image 3"></li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </section>
+            
+        </div>
+
+        <div class="background2-2">
+            <section class="contact2">
+                <h2>Contact</h2>
+
+                <section>
+                    <h3>Find me here!</h3>
+
+                    <p>e-mail</p>
+                    <button>
+                        <img src="images/mailIcoon.svg" alt="email icoon" class="email-logo">
+                        <p>
+                            berend@janssen-it.com
+                        </p>
+                    </button>
+
+                    <p>LinkedIn</p>
+                    <a href="https://www.linkedin.com/in/berendjanssen/">
+                        <img src="images/linkedInIcoon.svg" alt="linkedin logo" class="linkedin-logo">
+                        <p>Berend Janssen</p>
+                    </a>
+                </section>
+
+                <section>
+                    <h3>Download my CV!</h3>
+
+                    <a href="overig/CV_Berend_Janssen.pdf" download="CV_Berend_Janssen">
+                        <img src="images/downloadIcoon.svg" alt="download icoon" class="download">
+                    </a>
+                    
+                </section>
+
+                <img class="kampvuur" src="./images/Vlam.png" alt="">
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© Berend Janssen 2025</p>
+    </footer>
+
+    <script defer src="script/script.js"></script>
+</body>
+</html>
